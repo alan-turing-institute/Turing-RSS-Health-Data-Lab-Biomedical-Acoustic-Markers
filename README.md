@@ -1,8 +1,3 @@
-![pytest](https://github.com/test-and-trace/jbc-cough-in-a-box/actions/workflows/pytest.yaml/badge.svg)
-![pre-commit](https://github.com/test-and-trace/jbc-cough-in-a-box/actions/workflows/pre-commit.yaml/badge.svg)
-![nbstripout](https://github.com/test-and-trace/jbc-cough-in-a-box/actions/workflows/pre-commit-nbstripout.yaml/badge.svg)
-
-
 # jbc-cough-in-a-box
 This repository details the code required to replicate the results in the following three papers:
 - Audio-based AI classifiers show no evidence of improved COVID-19 diagnosis over simple symptoms checkers
@@ -63,7 +58,7 @@ Once this is complete then training can begin:
 ```bash
 sh run_ciab.sh
 ```
-TODO: add loading saved model and running inference on test sets
+TODO: add loading saved model and running inference on test sets instructions
 
 ### BNN results
 For more more detailed description please consult the [BNN README](/BNNBaseline).
@@ -134,4 +129,30 @@ It is assumed that users will have access to the CIAB UKDS dataset ([apply here]
 
 ### Citations
 This repository details the code used to create the results presented in the following three papers. Please cite.
-TODO: add preprint then update to Journal references.
+``` 
+@article{coppock2022,
+  author = {Coppock, Harry and Nicholson, George and Kiskin, Ivan and Koutra, Vasiliki and Baker, Kieran and Budd, Jobie and Payne, Richard and Karoune, Emma and Hurley, David and Titcomb, Alexander and Egglestone, Sabrina and Cañadas, Ana Tendero and Butler, Lorraine and Jersakova, Radka and Mellor, Jonathon and Patel, Selina and Thornley, Tracey and Diggle, Peter and Richardson, Sylvia and Packham, Josef and Schuller, Björn W. and Pigoli, Davide and Gilmour, Steven and Roberts, Stephen and Holmes, Chris},
+  title = {Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers},
+  journal = {arXiv},
+  year = {2022},
+  doi = {10.48550/ARXIV.2212.08570},
+  url = {https://arxiv.org/abs/2212.08570},
+}
+
+@article{budd2022,
+    author={Jobie Budd and Kieran Baker and Emma Karoune and Harry Coppock and Selina Patel and Ana Tendero Cañadas and Alexander Titcomb and Richard Payne and David Hurley and Sabrina Egglestone and Lorraine Butler and George Nicholson and Ivan Kiskin and Vasiliki Koutra and Radka Jersakova and Peter Diggle and Sylvia Richardson and Bjoern Schuller and Steven Gilmour and Davide Pigoli and Stephen Roberts and Josef Packham Tracey Thornley Chris Holmes},
+    title={A large-scale and PCR-referenced vocal audio dataset for COVID-19},
+    year={2022},
+    journal={arXiv},
+    doi = {10.48550/ARXIV.2212.07738}
+}
+
+@article{Pigoli2022,
+    author={Davide Pigoli and Kieran Baker and Jobie Budd and Lorraine Butler and Harry Coppock
+        and Sabrina Egglestone and Steven G.\ Gilmour and Chris Holmes and David Hurley and Radka Jersakova and Ivan Kiskin and Vasiliki Koutra and George Nicholson and Joe Packham and Selina Patel and Richard Payne and Stephen J.\ Roberts and Bj\"{o}rn W.\ Schuller and Ana Tendero-Ca$\tilde{n}$adas and Tracey Thornley and Alexander Titcomb},
+    title={Statistical Design and Analysis for Robust Machine Learning: A Case Study from Covid-19},
+    year={2022},
+    journal={arXiv},
+    doi = {10.48550/ARXIV.2212.08571}
+}
+```
