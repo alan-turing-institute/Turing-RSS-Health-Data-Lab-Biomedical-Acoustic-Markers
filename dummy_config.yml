@@ -1,0 +1,8 @@
+# This is a dummy config file where paths to key data attributes need to be filled in.
+# Experimental paths are not shared for sercurity concerns
+# Qs to harry.coppock@imperial.ac.uk or raise an issue (preferred)
+#
+
+participant_meta: path-to-participant-meta-data-file
+audio_meta: path-to-audio-meta-data-file
+splits_meta: path-to-train-test-splits-file
