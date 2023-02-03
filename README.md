@@ -35,16 +35,9 @@ To make the replication of results easy we have provided a docker image of the e
 docker run -it --name <name_for_container> -v <location_of_git_repo>:/workspace/ --gpus=all --ipc=host harrycoppock/ciab:ciab_v4
 ```
 This will open a new terminal inside the docker. Do not worry about having to download the docker image from the hub, the above command with handle this.
-_note: this will take up 12GB of space. We are currently working on sliming the working environment down._
 
-An alternative method to run this code is to boot up a python virtual environment:
+If you are running this programme on macOS please add the flag  ```--platform=linux/amd64```
 
-```bash
-python3 -m venv <name_for_venv>
-source <name_for_venv>/bin/activate
-pip install -r docker/requirements.txt
-```
-_note: as this may yield a different experimental environment we cannot guarantee the full replication of results - this is what the docker container is for_
 
 ### SSAST results
 **Warning** preprocessing and training take a considerable amount of time and require access to a V100 GPU or equivalent.
