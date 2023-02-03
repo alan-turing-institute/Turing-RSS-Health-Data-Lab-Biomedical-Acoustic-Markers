@@ -36,7 +36,7 @@ docker run -it --name <name_for_container> -v <location_of_git_repo>:/workspace/
 ```
 This will open a new terminal inside the docker. Do not worry about having to download the docker image from the hub, the above command with handle this.
 
-If you are running this programme on macOS please add the flag  ```--platform=linux/amd64```
+If you are on macOS please add the flag  ```--platform=linux/amd64```
 
 
 ### SSAST results
