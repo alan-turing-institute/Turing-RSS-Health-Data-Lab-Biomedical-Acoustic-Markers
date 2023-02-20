@@ -117,8 +117,8 @@ cd ..
 ### Tests
 There are no unit tests for this code base. Assert statements however feature throughout the codebase to test for expected functionality. There are a set of tests which should be run once train-test splits are created. This tests for over lapping splits, duplicate results and much more.
 
-### Assumptions
-It is assumed that users will have access to the CIAB UKDS dataset ([apply here](google.com)). For details concerning how this dataset was collected please consult the 3 cited papers, particulary the 'data' paper.
+### Data
+We have made the dataset available subject to approval and a data sharing contract. To apply please email DataAccess@ukhsa.gov.uk and request 'The UK COVID-19 Vocal Audio Dataset'. To learn about how to apply for UKHSA data, visit: https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data. For details concerning how this dataset was collected please consult the 3 cited papers, particulary the 'data' paper.
 
 ### Citations
 This repository details the code used to create the results presented in the following three papers. Please cite.
