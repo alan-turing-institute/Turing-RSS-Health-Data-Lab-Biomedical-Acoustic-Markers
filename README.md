@@ -38,9 +38,9 @@ This will open a new terminal inside the docker. Do not worry about having to do
 
 If you are on macOS please add the flag  ```--platform=linux/amd64```
 
-### The UK COVID-19 Vocal Audio Dataset
-The UK COVID-19 Vocal Audio Dataset is not publicly available. Access may be requested from UKHSA (DataAccess@ukhsa.gov.uk), and will be granted subject to approval and a data sharing contract. To learn about how to apply for UKHSA data, visit:
-[https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data)
+
+### Data
+We have made the dataset available subject to approval and a data sharing contract. To apply please email DataAccess@ukhsa.gov.uk and request 'The UK COVID-19 Vocal Audio Dataset'. To learn about how to apply for UKHSA data, visit: [https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data). For details concerning how this dataset was collected please consult the 3 cited papers, particulary the 'data' paper.
 
 ### SSAST results
 **Warning** preprocessing and training take a considerable amount of time and require access to a V100 GPU or equivalent.
@@ -117,9 +117,6 @@ cd ..
 ### Tests
 There are no unit tests for this code base. Assert statements however feature throughout the codebase to test for expected functionality. There are a set of tests which should be run once train-test splits are created. This tests for over lapping splits, duplicate results and much more.
 
-
-### Data
-We have made the dataset available subject to approval and a data sharing contract. To apply please email DataAccess@ukhsa.gov.uk and request 'The UK COVID-19 Vocal Audio Dataset'. To learn about how to apply for UKHSA data, visit: https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data. For details concerning how this dataset was collected please consult the 3 cited papers, particulary the 'data' paper.
 
 
 ### Citations
