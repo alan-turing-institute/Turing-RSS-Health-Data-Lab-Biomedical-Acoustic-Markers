@@ -40,7 +40,7 @@ If you are on macOS please add the flag  ```--platform=linux/amd64```
 
 ### The UK COVID-19 Vocal Audio Dataset
 The UK COVID-19 Vocal Audio Dataset is not publicly available. Access may be requested from UKHSA (DataAccess@ukhsa.gov.uk), and will be granted subject to approval and a data sharing contract. To learn about how to apply for UKHSA data, visit:
-[https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh]{https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data}
+[https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data)
 
 ### SSAST results
 **Warning** preprocessing and training take a considerable amount of time and require access to a V100 GPU or equivalent.
@@ -76,7 +76,7 @@ python evaluate.py
 
 
 ### SVM-Opensmile baseline
-To run OpenSmile feature extraction first build the OpenSmile audio feature extraction package from source by following these [instructions]{https://github.com/audeering/opensmile}. Then run:
+To run OpenSmile feature extraction first build the OpenSmile audio feature extraction package from source by following these [instructions](https://github.com/audeering/opensmile). Then run:
 ```python
 python SvmBaseline/opensmile_feat_extraction.py
 ```
