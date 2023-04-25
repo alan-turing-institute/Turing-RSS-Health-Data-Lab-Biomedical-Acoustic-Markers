@@ -38,6 +38,9 @@ This will open a new terminal inside the docker. Do not worry about having to do
 
 If you are on macOS please add the flag  ```--platform=linux/amd64```
 
+### The UK COVID-19 Vocal Audio Dataset
+The UK COVID-19 Vocal Audio Dataset is not publicly available. Access may be requested from UKHSA (DataAccess@ukhsa.gov.uk), and will be granted subject to approval and a data sharing contract. To learn about how to apply for UKHSA data, visit:
+[https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh]{https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data}
 
 ### SSAST results
 **Warning** preprocessing and training take a considerable amount of time and require access to a V100 GPU or equivalent.
@@ -51,7 +54,6 @@ Once this is complete then training can begin:
 ```bash
 sh run_ciab.sh
 ```
-TODO: add loading saved model and running inference on test sets instructions
 
 ### BNN results
 For more more detailed description please consult the [BNN README](/BNNBaseline).
@@ -74,12 +76,11 @@ python evaluate.py
 
 
 ### SVM-Opensmile baseline
-To run OpenSmile feature extraction:
+To run OpenSmile feature extraction first build the OpenSmile audio feature extraction package from source by following these [instructions]{https://github.com/audeering/opensmile}. Then run:
 ```python
 python SvmBaseline/opensmile_feat_extraction.py
 ```
 This will extract opensmile features for the test and train sets in the s3 bucket. It will save them in features/opensmile/
-TODO: update when data is on UKDS so as to note point to s3
 
 To run SVM classificaiton on extracted features:
 ```python
@@ -87,7 +88,6 @@ python SvmBaseline/svm.py
 ```
 ### Dummy config
 To run experiments please fill in the fields in ./dummy_config.yaml
-TODO: adapt config and acompanying code to fit UKDS public format
 
 ### Replicate experimental splits [optional]
 To replicate the creation of the 3 training sets, 3 validation sets and 5 testing sets the following commands can be run:
@@ -117,8 +117,10 @@ cd ..
 ### Tests
 There are no unit tests for this code base. Assert statements however feature throughout the codebase to test for expected functionality. There are a set of tests which should be run once train-test splits are created. This tests for over lapping splits, duplicate results and much more.
 
+
 ### Data
 We have made the dataset available subject to approval and a data sharing contract. To apply please email DataAccess@ukhsa.gov.uk and request 'The UK COVID-19 Vocal Audio Dataset'. To learn about how to apply for UKHSA data, visit: https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data. For details concerning how this dataset was collected please consult the 3 cited papers, particulary the 'data' paper.
+
 
 ### Citations
 This repository details the code used to create the results presented in the following three papers. Please cite.
