@@ -1,0 +1,3 @@
+[submodule "ssast_ciab"]
+	path = ssast_ciab
+	url = https://github.com/harrygcoppock/ssast_ciab.git
