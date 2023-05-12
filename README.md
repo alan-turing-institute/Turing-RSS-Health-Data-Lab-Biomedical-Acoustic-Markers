@@ -4,7 +4,7 @@ This repository details the code required to replicate the results in the follow
 - A large-scale and PCR-referenced bioacoustics dataset for COVID-19
 - Statistical Design and Analysis for Robust Machine Learning: A Case Study from COVID-19
 
-_note: In the repository's current form it requires access to the an S3 environment with the currently private dataset on it. The dataset is soon to be released publicly through UKDS. When this happends the repository will be updated to fit that structure._
+_note: In order to replicate our findings one must first download the The UK COVID-19 Vocal Audio Dataset, pelase see below for details_
 
 _note: as both the code to generate the SSAST experiments and perform openSMILE feature extration exist as a git submodule when cloning this repo, if you are intending on running the above analysis make sure to add the recursive submodule flag to the clone command:_
 ```bash
@@ -39,8 +39,13 @@ This will open a new terminal inside the docker. Do not worry about having to do
 If you are running this programme on macOS please add the flag  ```--platform=linux/amd64```
 
 ### The UK COVID-19 Vocal Audio Dataset
-The UK COVID-19 Vocal Audio Dataset is not publicly available. Access may be requested from UKHSA (DataAccess@ukhsa.gov.uk), and will be granted subject to approval and a data sharing contract. To learn about how to apply for UKHSA data, visit:
+The full UK COVID-19 Vocal Audio Dataset is not publicly available as is classed as 'Special Category Personal Data'. Access may be requested from UKHSA (DataAccess@ukhsa.gov.uk), and will be granted subject to approval and a data sharing contract. To learn about how to apply for UKHSA data, visit:
 [https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh]{https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data}
+
+We understand that this might not be practical for a number of users interested in our work and therefore we have created a new curated dataset which has been classed as 'Open Access' data (there will be a downloadable link which anyone can use, without the need to even register). In order to achieve this the 'sentence' modality has been removed, leaving behind the 'cough', 'three cough' and 'exahaltion' modalities. In addition, to meet open access requirements, some select attributes of the meta data have been aggregated (to prevent groups of individuals of smaller than 3 being singled out on selection of attributes). This means that the 'sentence' modality results are not replicable or the creation of the train-test splits. We note that this just applys for the the open access version of the data and that our full stack is replicable with the original dataset which can be accessed following the instructions above. We note that we provide the train-test splits in _.csv_ form so that the machine learning experiments can be replicated with the open access data. This open access dataset has been created however, is waiting final UKHSA approval before we upload it to zenodo. 
+
+### Demo!
+To easily run the code yourself using your own voice recordings, (no need to download the data), we have provided a short demo hosted on google colab. Please follow this [link](https://colab.research.google.com/drive/1qCbRd3zxvIMd_DwaVEie2Akf9OSzJauk?usp=sharing) to have a go yourself!
 
 ### SSAST results
 **Warning** preprocessing and training take a considerable amount of time and require access to a V100 GPU or equivalent.
