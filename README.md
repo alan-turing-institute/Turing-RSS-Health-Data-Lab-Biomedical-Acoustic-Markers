@@ -36,11 +36,13 @@ docker run -it --name <name_for_container> -v <location_of_git_repo>:/workspace/
 ```
 This will open a new terminal inside the docker. Do not worry about having to download the docker image from the hub, the above command with handle this.
 
-If you are running this programme on macOS please add the flag  ```--platform=linux/amd64```
+If you are on macOS please add the flag  ```--platform=linux/amd64```
+
 
 ### The UK COVID-19 Vocal Audio Dataset
 The full UK COVID-19 Vocal Audio Dataset is not publicly available as is classed as 'Special Category Personal Data'. Access may be requested from UKHSA (DataAccess@ukhsa.gov.uk), and will be granted subject to approval and a data sharing contract. To learn about how to apply for UKHSA data, visit:
 [https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukh]{https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data}
+
 
 We understand that this might not be practical for a number of users interested in our work and therefore we have created a new curated dataset which has been classed as 'Open Access' data (there will be a downloadable link which anyone can use, without the need to even register). In order to achieve this the 'sentence' modality has been removed, leaving behind the 'cough', 'three cough' and 'exahaltion' modalities. In addition, to meet open access requirements, some select attributes of the meta data have been aggregated (to prevent groups of individuals of smaller than 3 being singled out on selection of attributes). This means that the 'sentence' modality results are not replicable or the creation of the train-test splits. We note that this just applys for the the open access version of the data and that our full stack is replicable with the original dataset which can be accessed following the instructions above. We note that we provide the train-test splits in _.csv_ form so that the machine learning experiments can be replicated with the open access data. This open access dataset has been created however, is waiting final UKHSA approval before we upload it to zenodo. 
 
@@ -81,7 +83,7 @@ python evaluate.py
 
 
 ### SVM-Opensmile baseline
-To run OpenSmile feature extraction first build the OpenSmile audio feature extraction package from source by following these [instructions]{https://github.com/audeering/opensmile}. Then run:
+To run OpenSmile feature extraction first build the OpenSmile audio feature extraction package from source by following these [instructions](https://github.com/audeering/opensmile). Then run:
 ```python
 python SvmBaseline/opensmile_feat_extraction.py
 ```
@@ -121,6 +123,7 @@ cd ..
 
 ### Tests
 There are no unit tests for this code base. Assert statements however feature throughout the codebase to test for expected functionality. There are a set of tests which should be run once train-test splits are created. This tests for over lapping splits, duplicate results and much more.
+
 
 
 ### Citations
