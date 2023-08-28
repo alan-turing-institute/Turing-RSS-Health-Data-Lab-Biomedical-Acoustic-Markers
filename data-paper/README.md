@@ -1,33 +1,33 @@
-# The UK COVID-19 Vocal Audio Dataset - Open Access Version
+# The UK COVID-19 Vocal Audio Dataset, Open Access Edition
 
 This dataset is the open access version of The UK COVID-19 Vocal Audio Dataset. We point the user to [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) and [Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers](https://arxiv.org/abs/2212.08570) for a full description of the dataset. 
 
 
 ## Contents
 
-### Meta data
+### Metadata
 
-- **_particpant_metadata.csv_** row wise, participant identifier indexed information on particpant. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for the full data dictionary.
-- **_audio_metadata.csv_** row wise, particpant indentifier indexed information on four recorded audio modalities. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for the full data dictionary.
-- **_train_test_splits.csv_** row wise, particpant indetifier indexed information on train test splits for the following sets: ‘Randomised’ train and test set, Standard’ train and test set, Matched’ train and test sets, ‘Longitudinal’ test set and ‘Matched Longitudinal’ test set. Please see [Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers](https://arxiv.org/abs/2212.08570) for a full description of the train test splits. 
+- **_particpant_metadata.csv_** row wise, participant identifier indexed information on participant demographics and health status. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for a full description of the dataset.
+- **_audio_metadata.csv_** row wise, participant indentifier indexed information on three recorded audio modalities including audio filepaths. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for a full description of the dataset.
+- **_train_test_splits.csv_** row wise, participant indetifier indexed information on train test splits for the following sets: ‘Randomised’ train and test set, Standard’ train and test set, Matched’ train and test sets, ‘Longitudinal’ test set and ‘Matched Longitudinal’ test set. Please see [Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers](https://arxiv.org/abs/2212.08570) for a full description of the train test splits. 
 
 ### The Dublin Core™ Metadata Initiative
 
-- Title: The UK COVID-19 Vocal Audio Dataset
-- Creator: The UKHSA in collaboration with The Turing-RSS Health Data Lab
-- Subject: COVID-19 in Respiratory audio
-- Description: Vocal records of PCR validated individuals
-- Publisher: ? Government licence?
-- Contributor: The UKHSA and The Alan Turing Institute
-- Date: Data was collected between March 2021 to March 2022
-- Type: Acoustic
-- Format: .wav, .csv
-- Identifier: TODO add doi
-- Source: The (full) UK COVID-19 Vocal Audio Dataset available through signing of a data sharing contract with the UKHSA
-- Language: English
-- Relation: a related data resource - not sure what to put here
-- Coverage: spatial or temporal topic of the resource, spatial applicability of the Data - not sure what to put here either
-- Rights: the information about rights held in and over the resource - Government licence? 
+- Title: The UK COVID-19 Vocal Audio Dataset, Open Access Edition.
+- Creator: The UK Health Security Agency (UKHSA) in collaboration with The Turing-RSS Health Data Lab.
+- Subject: COVID-19, Respiratory symptom, Other audio, Cough, Asthma, Influenza. 
+- Description:  The UK COVID-19 Vocal Audio Dataset Open Access Edition is designed for the training and evaluation of machine learning models that classify SARS-CoV-2 infection status or associated respiratory symptoms using vocal audio. The UK Health Security Agency recruited voluntary participants through the national Test and Trace programme and the REACT-1 survey in England from March 2021 to March 2022, during dominant transmission of the Alpha and Delta SARS-CoV-2 variants and some Omicron variant sublineages. Audio recordings of volitional coughs and exhalations were collected in the 'Speak up to help beat coronavirus' digital survey alongside demographic, self-reported symptom and respiratory condition data, and linked to SARS-CoV-2 test results. The UK COVID-19 Vocal Audio Dataset Open Access Edition represents the largest collection of SARS-CoV-2 PCR-referenced audio recordings to date. PCR results were linked to 70,794 of 72,999 participants and 24,155 of 25,776 positive cases. Respiratory symptoms were reported by 45.62% of participants. This dataset has additional potential uses for bioacoustics research, with 11.30% participants reporting asthma, and 27.20% with linked influenza PCR test results.
+- Publisher: The UK Health Security Agency (UKHSA).
+- Contributor: The UK Health Security Agency (UKHSA) and The Alan Turing Institute. 
+- Date: 2021-03/2022-03
+- Type: Dataset
+- Format:  Waveform Audio File Format audio/wave, Comma-separated values text/csv, python pickle pkl using protocol=4.
+- Identifier: TODO add zenodo reserved doi
+- Source: The UK COVID-19 Vocal Audio Dataset Protected Edition, accessed via application to [Accessing UKHSA protected data](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data).
+- Language: eng
+- Relation: The UK COVID-19 Vocal Audio Dataset Protected Edition, accessed via application to [Accessing UKHSA protected data](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data).
+- Coverage: United Kingdom, 2021-03/2022-03.
+- Rights: Open Government Licence version 3 (OGL v.3), © Crown Copyright UKHSA 2023.
 
 
 ### Citations
