@@ -7,7 +7,7 @@ This dataset is the open access version of The UK COVID-19 Vocal Audio Dataset. 
 
 ### Metadata
 
-- **_particpant_metadata.csv_** row wise, participant identifier indexed information on participant demographics and health status. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for a full description of the dataset.
+- **_participant_metadata.csv_** row wise, participant identifier indexed information on participant demographics and health status. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for a full description of the dataset.
 - **_audio_metadata.csv_** row wise, participant indentifier indexed information on three recorded audio modalities including audio filepaths. Please see [A large-scale and PCR-referenced vocal audio dataset for COVID-19](https://arxiv.org/pdf/2212.07738.pdf) for a full description of the dataset.
 - **_train_test_splits.csv_** row wise, participant indetifier indexed information on train test splits for the following sets: ‘Randomised’ train and test set, Standard’ train and test set, Matched’ train and test sets, ‘Longitudinal’ test set and ‘Matched Longitudinal’ test set. Please see [Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers](https://arxiv.org/abs/2212.08570) for a full description of the train test splits. 
 
