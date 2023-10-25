@@ -21,14 +21,14 @@ This dataset is the open access version of The UK COVID-19 Vocal Audio Dataset. 
 - Contributor: The UK Health Security Agency (UKHSA) and The Alan Turing Institute. 
 - Date: 2021-03/2022-03
 - Type: Dataset
-- Format:  Waveform Audio File Format audio/wave, Comma-separated values text/csv, python pickle pkl using protocol=4.
+- Format:  Waveform Audio File Format audio/wave, Comma-separated values text/csv
 - Identifier: TODO add zenodo reserved doi
 - Source: The UK COVID-19 Vocal Audio Dataset Protected Edition, accessed via application to [Accessing UKHSA protected data](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data).
 - Language: eng
 - Relation: The UK COVID-19 Vocal Audio Dataset Protected Edition, accessed via application to [Accessing UKHSA protected data](https://www.gov.uk/government/publications/accessing-ukhsa-protected-data/accessing-ukhsa-protected-data).
 - Coverage: United Kingdom, 2021-03/2022-03.
 - Rights: Open Government Licence version 3 (OGL v.3), © Crown Copyright UKHSA 2023.
-
+- accessRights: When you use this information under the Open Government Licence, you should include the following attribution: The UK COVID-19 Vocal Audio Dataset Open Access Edition, UK Health Security Agency, 2023, licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/)
 
 ### Citations
 Please cite.
@@ -59,3 +59,12 @@ Please cite.
     doi = {10.48550/ARXIV.2212.08571}
 }
 ```
+
+### License
+© Crown Copyright, UK Health Security Agency, 2023
+
+The UK COVID-19 Vocal Audio Dataset Open Access Edition is licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/).
+
+When you use this information under the Open Government Licence, you must include the following attribution: 
+
+> The UK COVID-19 Vocal Audio Dataset Open Access Edition, UK Health Security Agency, 2023, licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/)
