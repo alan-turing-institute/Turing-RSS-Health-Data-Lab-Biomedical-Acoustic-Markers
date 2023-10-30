@@ -9,8 +9,7 @@ import concurrent.futures
 
 def check_audio_properties(row):
     mismatched_files_local = []
-    audio_dir = "/Users/hgc19/uk-covid19-vocal-audio-dataset-open-access-edition/audio"  # Define the audio directory here too, since this function will run in a separate process
-
+    audio_dir = "/Users/hgc19/uk-covid19-vocal-audio-dataset-open-access-edition/audio" 
     for audio_type in ['exhalation', 'cough', 'three_cough']:
         # Skip if the no audio was collected for that modality
         if row[f"{audio_type}_size"] <= 44.0 or str(row[f"{audio_type}_size"]) == 'nan':
