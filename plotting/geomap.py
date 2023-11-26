@@ -120,12 +120,12 @@ if __name__ == '__main__':
     im = plt.gca().get_children()[0]
     cax = fig.add_axes([0.92, 0.1, 0.03, 0.8])
     fig.colorbar(im, cax=cax)
-    plt.savefig(f'map_uk_all.png')
+    plt.savefig(f'map_uk_all.pdf')
 
 
     fig, ax = plt.subplots(1,1, figsize=(7.5, 10))
     cbar = plot_geo(data, 'Positive - Negative', ax)
     cax = fig.add_axes([0.92, 0.1, 0.03, 0.8])
     fig.colorbar(cbar, cax=cax)
-    plt.savefig(f'map_uk_difference.png')
+    plt.savefig(f'map_uk_difference.pdf')
     
