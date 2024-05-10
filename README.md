@@ -129,13 +129,12 @@ There are no unit tests for this code base. Assert statements however feature th
 ### Citations
 This repository details the code used to create the results presented in the following three papers. Please cite.
 ``` 
-@article{coppock2022,
-  author = {Coppock, Harry and Nicholson, George and Kiskin, Ivan and Koutra, Vasiliki and Baker, Kieran and Budd, Jobie and Payne, Richard and Karoune, Emma and Hurley, David and Titcomb, Alexander and Egglestone, Sabrina and Cañadas, Ana Tendero and Butler, Lorraine and Jersakova, Radka and Mellor, Jonathon and Patel, Selina and Thornley, Tracey and Diggle, Peter and Richardson, Sylvia and Packham, Josef and Schuller, Björn W. and Pigoli, Davide and Gilmour, Steven and Roberts, Stephen and Holmes, Chris},
-  title = {Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers},
-  journal = {arXiv},
-  year = {2022},
-  doi = {10.48550/ARXIV.2212.08570},
-  url = {https://arxiv.org/abs/2212.08570},
+@article{coppock2024audio,
+ author = {Coppock, Harry and Nicholson, George and Kiskin, Ivan and Koutra, Vasiliki and Baker, Kieran and Budd, Jobie and Payne, Richard and Karoune, Emma and Hurley, David and Titcomb, Alexander and Egglestone, Sabrina and Cañadas, Ana Tendero and Butler, Lorraine and Jersakova, Radka and Mellor, Jonathon and Patel, Selina and Thornley, Tracey and Diggle, Peter and Richardson, Sylvia and Packham, Josef and Schuller, Björn W. and Pigoli, Davide and Gilmour, Steven and Roberts, Stephen and Holmes, Chris},
+ title = {Audio-based AI classifiers show no evidence of improved COVID-19 screening over simple symptoms checkers},
+ journal = {Nature Machine Intelligence},
+ year = {2024},
+ doi = {https://doi.org/10.1038/s42256-023-00773-8}
 }
 
 @article{budd2022,
