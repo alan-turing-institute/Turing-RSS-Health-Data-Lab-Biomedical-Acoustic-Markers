@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8130844.svg)](https://doi.org/10.5281/zenodo.8130844)
-# jbc-cough-in-a-box
+# Turing-RSS Health Data Lab Biomedical Acoustic Markers
 This repository details the code required to replicate the results in the following three papers:
 - Audio-based AI classifiers show no evidence of improved COVID-19 diagnosis over simple symptoms checkers
 - A large-scale and PCR-referenced bioacoustics dataset for COVID-19
