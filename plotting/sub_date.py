@@ -68,4 +68,4 @@ if __name__ == '__main__':
 
     fig, ax = plt.subplots(111)
     sub_time_by_cov(ax)
-    plt.savefig('figs/subtimee.png')
+    plt.savefig('figs/subtimee.pdf')
