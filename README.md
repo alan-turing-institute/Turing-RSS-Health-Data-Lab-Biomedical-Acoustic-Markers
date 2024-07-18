@@ -140,12 +140,12 @@ This repository details the code used to create the results presented in the fol
  doi = {https://doi.org/10.1038/s42256-023-00773-8}
 }
 
-@article{budd2022,
-    author={Jobie Budd and Kieran Baker and Emma Karoune and Harry Coppock and Selina Patel and Ana Tendero Cañadas and Alexander Titcomb and Richard Payne and David Hurley and Sabrina Egglestone and Lorraine Butler and George Nicholson and Ivan Kiskin and Vasiliki Koutra and Radka Jersakova and Peter Diggle and Sylvia Richardson and Bjoern Schuller and Steven Gilmour and Davide Pigoli and Stephen Roberts and Josef Packham Tracey Thornley Chris Holmes},
+@article{budd2024,
+ author={Jobie Budd and Kieran Baker and Emma Karoune and Harry Coppock and Selina Patel and Ana Tendero Cañadas and Alexander Titcomb and Richard Payne and David Hurley and Sabrina Egglestone and Lorraine Butler and George Nicholson and Ivan Kiskin and Vasiliki Koutra and Radka Jersakova and Peter Diggle and Sylvia Richardson and Bjoern Schuller and Steven Gilmour and Davide Pigoli and Stephen Roberts and Josef Packham Tracey Thornley Chris Holmes},
     title={A large-scale and PCR-referenced vocal audio dataset for COVID-19},
-    year={2022},
-    journal={arXiv},
-    doi = {10.48550/ARXIV.2212.07738}
+    year={2024},
+    journal={Scientific Data},
+    doi = {https://doi.org/10.1038/s41597-024-03492-w}
 }
 
 @article{Pigoli2022,
