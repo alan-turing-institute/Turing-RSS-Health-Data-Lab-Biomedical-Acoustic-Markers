@@ -12,6 +12,14 @@ _note: as both the code to generate the SSAST experiments and perform openSMILE 
 git clone --recurse-submodules <repo.git> 
 ```
 
+<mark>**Please note**<mark>
+
+This project is now concluded and this is the final repository. 
+You can ask a question in the issues but it may take a while for someone to answer you.
+You can also email The Alan Turing Institute Health Team using this email address (healthprogramme@turing.ac.uk) and they will try to connect you to a researcher from this project. 
+All details of the final outputs from this project can be found below. 
+
+
 ## Contents
 **[Data Paper](data-paper/)** --> notebook to produce summary statistics and plotly figures in UK COVID-19 Vocal Audio Dataset data descriptor.
 
