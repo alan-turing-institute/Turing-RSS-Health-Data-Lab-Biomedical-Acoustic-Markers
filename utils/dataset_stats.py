@@ -32,16 +32,22 @@ class DatasetStats():
     '''
     RANDOM_SEED = 42
 
-    def __init__(self, create_meta=False, text_extract=False, embed_sentence=False, outlier_detector=False, present_outliers=False, create_matched_validation=False):
+    def __init__(self, create_meta=False, text_extract=False, embed_sentence=False, outlier_detector=False, present_outliers=False, create_matched_validation=False, s3_env=False):
         try:
-            with open('config.yml', 'r')as conf:
+            with open('../config.yml', 'r') as conf:
                 self.PATHS = yaml.safe_load(conf)
         except FileNotFoundError as err:
             raise ValueError(f'You need to specify your local paths to the data and meta data: {err}')
-        self.bucket_meta = self.get_bucket(self.PATHS['meta_bucket'])
-        self.bucket_audio = self.get_bucket(self.PATHS['audio_bucket'])
+        if s3_env:
+            self.bucket_meta = self.get_bucket(self.PATHS['meta_bucket'])
+            self.bucket_audio = self.get_bucket(self.PATHS['audio_bucket'])
+        else:
+            self.bucket_meta = None
+            self.bucket_audio = None
+
         self.create_meta = create_meta
         self.create_matched_validation = create_matched_validation
+        self.s3_env = s3_env
         if create_meta:
             print('creating the splits and adding to meta data')
             self.meta_data, self.train, self.test, self.long, self.orig_train, self.orig_test = self.load_train_test_splits()
@@ -59,32 +65,35 @@ class DatasetStats():
         else:
             print('Loading saved metafile')
             self.meta_data = pd.read_csv(self.get_file(
-                                            'BAMstudy2022-prep/participant_metadata_160822.csv',
+                                            self.PATHS['participant_meta'],
                                             self.bucket_meta))
             self.splits = pd.read_csv(self.get_file(
-                                            'BAMstudy2022-prep/train_test_splits_160822.csv',
+                                            self.PATHS['splits_meta'],
                                             self.bucket_meta))
             self.audio = pd.read_csv(self.get_file(
-                                            'BAMstudy2022-prep/audio_metadata_160822.csv',
+                                            self.PATHS['audio_meta'],
                                             self.bucket_meta))
-            # Temporary measure while dataset is still on s3
-            self.s3_lookup = pd.read_csv(self.get_file(
-                                            'BAMstudy2022-prep/audio_lookup.csv',
-                                            self.bucket_meta))
-            self.s3_lookup.rename(columns={'exhalation_url_url': 'exhalation_url'}, inplace=True)
-            self.sentence_lookup = self.s3_lookup[['sentence_file_name', 'sentence_url']]
-            self.cough_lookup = self.s3_lookup[['cough_file_name', 'cough_url']]
-            self.three_cough_lookup = self.s3_lookup[['three_cough_file_name', 'three_cough_url']]
-            self.exhalation_lookup = self.s3_lookup[['exhalation_file_name', 'exhalation_url']]
+            
+            if self.s3_env:
+                # Temporary measure while dataset is still on s3
+                self.s3_lookup = pd.read_csv(self.get_file(
+                                                'BAMstudy2022-prep/audio_lookup.csv',
+                                                self.bucket_meta))
+                self.s3_lookup.rename(columns={'exhalation_url_url': 'exhalation_url'}, inplace=True)
+                self.sentence_lookup = self.s3_lookup[['sentence_file_name', 'sentence_url']]
+                self.cough_lookup = self.s3_lookup[['cough_file_name', 'cough_url']]
+                self.three_cough_lookup = self.s3_lookup[['three_cough_file_name', 'three_cough_url']]
+                self.exhalation_lookup = self.s3_lookup[['exhalation_file_name', 'exhalation_url']]
 
 
             self.meta_data = pd.merge(self.meta_data, self.splits, on='participant_identifier')
             self.meta_data = pd.merge(self.meta_data, self.audio, on='participant_identifier')
-            self.meta_data = self.meta_data.merge(
-                    self.s3_lookup,
-                    left_on=['exhalation_file_name', 'sentence_file_name', 'cough_file_name','three_cough_file_name'],
-                    right_on=['exhalation_file_name', 'sentence_file_name', 'cough_file_name', 'three_cough_file_name'],
-                    how='left')
+            if self.s3_env:
+                self.meta_data = self.meta_data.merge(
+                        self.s3_lookup,
+                        left_on=['exhalation_file_name', 'sentence_file_name', 'cough_file_name','three_cough_file_name'],
+                        right_on=['exhalation_file_name', 'sentence_file_name', 'cough_file_name', 'three_cough_file_name'],
+                        how='left')
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.stats()
 
@@ -94,6 +103,8 @@ class DatasetStats():
 
 
     def get_file(self, path, bucket):
+        if bucket == None:
+            return path
         return io.BytesIO(bucket.Object(path).get()['Body'].read())
 
     def load_train_test_splits(self):

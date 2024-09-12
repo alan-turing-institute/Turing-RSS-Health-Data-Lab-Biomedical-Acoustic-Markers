@@ -1,0 +1,6 @@
+figs/*
+.DS_Store
+__pycache__
+*.csv
+config.yml
+
